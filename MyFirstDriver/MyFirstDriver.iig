@@ -1,0 +1,20 @@
+//
+//  MyFirstDriver.iig
+//  MyFirstDriver
+//
+//  Created by Kenta Kubo on 4/17/23.
+//
+
+#ifndef MyFirstDriver_h
+#define MyFirstDriver_h
+
+#include <Availability.h>
+#include <DriverKit/IOService.iig>
+
+class MyFirstDriver: public IOService {
+public:
+    virtual kern_return_t
+    Start(IOService * provider) override;
+};
+
+#endif /* MyFirstDriver_h */
