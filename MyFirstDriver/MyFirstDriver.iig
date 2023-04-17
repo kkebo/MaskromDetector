@@ -8,12 +8,14 @@
 #ifndef MyFirstDriver_h
 #define MyFirstDriver_h
 
-#include <DriverKit/IOService.iig>
+#include <USBDriverKit/IOUSBHostDevice.iig>
 
-class MyFirstDriver: public IOService
+class MyFirstDriver: public IOUSBHostDevice
 {
 public:
+    virtual bool init() override;
     virtual kern_return_t Start(IOService *provider) override;
+    virtual void free() override;
 };
 
 #endif /* MyFirstDriver_h */

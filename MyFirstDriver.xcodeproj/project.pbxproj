@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		898993F729EC6718000C20AF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 898993F629EC6718000C20AF /* Settings.bundle */; };
+		89BECF5D29EDA7D100450C4B /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BECF5C29EDA7D100450C4B /* USBDriverKit.framework */; };
 		89F642FC29EC5C23001A8C56 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F642FB29EC5C23001A8C56 /* DriverKit.framework */; };
 		89F642FF29EC5C23001A8C56 /* MyFirstDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89F642FE29EC5C23001A8C56 /* MyFirstDriver.cpp */; };
 		89F6430129EC5C23001A8C56 /* MyFirstDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 89F6430029EC5C23001A8C56 /* MyFirstDriver.iig */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		898993F629EC6718000C20AF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		89BECF5C29EDA7D100450C4B /* USBDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDriverKit.framework; path = Library/Frameworks/USBDriverKit.framework; sourceTree = DEVELOPER_DIR; };
 		89F642F829EC5C23001A8C56 /* xyz.kebo.MyFirstDriverApp.Driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = xyz.kebo.MyFirstDriverApp.Driver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F642FB29EC5C23001A8C56 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = Library/Frameworks/DriverKit.framework; sourceTree = DEVELOPER_DIR; };
 		89F642FE29EC5C23001A8C56 /* MyFirstDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyFirstDriver.cpp; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BECF5D29EDA7D100450C4B /* USBDriverKit.framework in Frameworks */,
 				89F642FC29EC5C23001A8C56 /* DriverKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +103,7 @@
 		89F642FA29EC5C23001A8C56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89BECF5C29EDA7D100450C4B /* USBDriverKit.framework */,
 				89F642FB29EC5C23001A8C56 /* DriverKit.framework */,
 			);
 			name = Frameworks;
