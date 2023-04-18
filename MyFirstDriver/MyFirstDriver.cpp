@@ -16,30 +16,26 @@ struct MyFirstDriver_IVars
 
 bool MyFirstDriver::init()
 {
-    bool ret;
-
-    ret = super::init();
-    if (!ret) {
+    if (const auto ret = super::init(); !ret)
+    {
         os_log(OS_LOG_DEFAULT, "MyFirstDriver: init() - super::init failed with error: 0x%08x.", ret);
         return ret;
     }
 
-    ivars = IONewZero(MyFirstDriver_IVars, 1);
-    if (ivars == nullptr) {
+    if (ivars = IONewZero(MyFirstDriver_IVars, 1); ivars == nullptr)
+    {
         return false;
     }
 
     os_log(OS_LOG_DEFAULT, "MyFirstDriver: init() - Finished.");
 
-    return ret;
+    return true;
 }
 
 kern_return_t IMPL(MyFirstDriver, Start)
 {
-    kern_return_t ret;
-
-    ret = Start(provider, SUPERDISPATCH);
-    if (ret != kIOReturnSuccess) {
+    if (const auto ret = Start(provider, SUPERDISPATCH); ret != kIOReturnSuccess)
+    {
         os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - super::Start failed with error: 0x%08x.", ret);
         Stop(provider, SUPERDISPATCH);
         return ret;
@@ -47,14 +43,14 @@ kern_return_t IMPL(MyFirstDriver, Start)
 
     os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - Hello World");
 
-//    ivars->device = OSDynamicCast(IOUSBHostDevice, provider);
-//    if (ivars->device == nullptr) {
+//    if (ivars->device = OSDynamicCast(IOUSBHostDevice, provider); ivars->device == nullptr)
+//    {
 //        Stop(provider, SUPERDISPATCH);
 //        return kIOReturnNoDevice;
 //    }
 
-//    const auto *deviceDescriptor = ivars->device->CopyDeviceDescriptor();
-//    if (deviceDescriptor != nullptr) {
+//    if (const auto *deviceDescriptor = ivars->device->CopyDeviceDescriptor(); deviceDescriptor != nullptr)
+//    {
 //        os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - %04hx %04hx", deviceDescriptor->idVendor, deviceDescriptor->idProduct);
 //    }
 
@@ -62,7 +58,7 @@ kern_return_t IMPL(MyFirstDriver, Start)
 
     os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - Finished.");
 
-    return ret;
+    return kIOReturnSuccess;
 }
 
 void MyFirstDriver::free()
