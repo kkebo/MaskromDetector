@@ -7,6 +7,8 @@
 
 #include <os/log.h>
 
+#include <USBDriverKit/IOUSBHostDevice.h>
+
 #include "MyFirstDriver.h"
 
 struct MyFirstDriver_IVars
@@ -43,16 +45,16 @@ kern_return_t IMPL(MyFirstDriver, Start)
 
     os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - Hello World");
 
-//    if (ivars->device = OSDynamicCast(IOUSBHostDevice, provider); ivars->device == nullptr)
-//    {
-//        Stop(provider, SUPERDISPATCH);
-//        return kIOReturnNoDevice;
-//    }
+    if (ivars->device = OSDynamicCast(IOUSBHostDevice, provider); ivars->device == nullptr)
+    {
+        Stop(provider, SUPERDISPATCH);
+        return kIOReturnNoDevice;
+    }
 
-//    if (const auto *deviceDescriptor = ivars->device->CopyDeviceDescriptor(); deviceDescriptor != nullptr)
-//    {
-//        os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - %04hx %04hx", deviceDescriptor->idVendor, deviceDescriptor->idProduct);
-//    }
+    if (const auto *deviceDescriptor = ivars->device->CopyDeviceDescriptor(); deviceDescriptor != nullptr)
+    {
+        os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - %04hx %04hx", deviceDescriptor->idVendor, deviceDescriptor->idProduct);
+    }
 
     RegisterService();
 
@@ -63,7 +65,7 @@ kern_return_t IMPL(MyFirstDriver, Start)
 
 void MyFirstDriver::free()
 {
-//    OSSafeReleaseNULL(ivars->device);
+    OSSafeReleaseNULL(ivars->device);
     IOSafeDeleteNULL(ivars, MyFirstDriver_IVars, 1);
     super::free();
 }

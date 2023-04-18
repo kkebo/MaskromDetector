@@ -10,23 +10,16 @@
 			<string>com.apple.kpi.iokit</string>
 			<key>IOClass</key>
 			<string>IOUserService</string>
-			<key>IOMatchCategory</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>IOProviderClass</key>
-			<string>IOUserResources</string>
-			<key>IOResourceMatch</key>
-			<string>IOKit</string>
+			<string>IOUSBHostDevice</string>
 			<key>IOUserClass</key>
 			<string>MyFirstDriver</string>
 			<key>IOUserServerName</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-			<key>MyFirstDriverClientProperties</key>
-			<dict>
-				<key>IOClass</key>
-				<string>IOUserClient</string>
-				<key>IOUserClass</key>
-				<string>MyFirstDriverClient</string>
-			</dict>
+			<key>idVendor</key>
+			<integer>0x2207</integer>
+			<key>idProduct</key>
+			<integer>0x330c</integer>
 		</dict>
 	</dict>
 </dict>

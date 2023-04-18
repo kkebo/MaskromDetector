@@ -8,9 +8,9 @@
 #ifndef MyFirstDriver_h
 #define MyFirstDriver_h
 
-#include <USBDriverKit/IOUSBHostDevice.iig>
+#include <DriverKit/IOService.iig>
 
-class MyFirstDriver: public IOUSBHostDevice
+class MyFirstDriver: public IOService
 {
 public:
     virtual bool init() override;
