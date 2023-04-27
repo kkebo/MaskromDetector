@@ -56,7 +56,11 @@ kern_return_t IMPL(MyFirstDriver, Start)
         os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - %04hx %04hx", deviceDescriptor->idVendor, deviceDescriptor->idProduct);
     }
 
-    RegisterService();
+    if (const auto ret = RegisterService(); ret != kIOReturnSuccess)
+    {
+        Stop(provider, SUPERDISPATCH);
+        return ret;
+    }
 
     os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - Finished.");
 
