@@ -43,7 +43,7 @@ kern_return_t IMPL(MyFirstDriver, Start)
         return ret;
     }
 
-    os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - Hello World");
+    os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - super::Start succeeded.");
 
     if (ivars->device = OSDynamicCast(IOUSBHostDevice, provider); ivars->device == nullptr)
     {
@@ -53,7 +53,7 @@ kern_return_t IMPL(MyFirstDriver, Start)
 
     if (const auto *deviceDescriptor = ivars->device->CopyDeviceDescriptor(); deviceDescriptor != nullptr)
     {
-        os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - %04hx %04hx", deviceDescriptor->idVendor, deviceDescriptor->idProduct);
+        os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - VID: %04hx, PID: %04hx", deviceDescriptor->idVendor, deviceDescriptor->idProduct);
     }
 
     if (const auto ret = RegisterService(); ret != kIOReturnSuccess)
@@ -62,7 +62,7 @@ kern_return_t IMPL(MyFirstDriver, Start)
         return ret;
     }
 
-    os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - Finished.");
+    os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - RegisterService succeeded.");
 
     return kIOReturnSuccess;
 }
