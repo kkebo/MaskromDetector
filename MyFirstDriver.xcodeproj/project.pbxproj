@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		898993F729EC6718000C20AF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 898993F629EC6718000C20AF /* Settings.bundle */; };
+		89988F3129F55D3600478CC1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89988F2E29F559F100478CC1 /* IOKit.framework */; };
 		89BECF5D29EDA7D100450C4B /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BECF5C29EDA7D100450C4B /* USBDriverKit.framework */; };
 		89F642FC29EC5C23001A8C56 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F642FB29EC5C23001A8C56 /* DriverKit.framework */; };
 		89F642FF29EC5C23001A8C56 /* MyFirstDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89F642FE29EC5C23001A8C56 /* MyFirstDriver.cpp */; };
@@ -44,7 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8913C13B29FAF09700C0D391 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		898993F629EC6718000C20AF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		89988F2E29F559F100478CC1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		89988F3029F55BB300478CC1 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		89BECF5C29EDA7D100450C4B /* USBDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDriverKit.framework; path = Library/Frameworks/USBDriverKit.framework; sourceTree = DEVELOPER_DIR; };
 		89F642F829EC5C23001A8C56 /* xyz.kebo.MyFirstDriverApp.Driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = xyz.kebo.MyFirstDriverApp.Driver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F642FB29EC5C23001A8C56 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = Library/Frameworks/DriverKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -75,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89988F3129F55D3600478CC1 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,7 @@
 		89F642EE29EC5C23001A8C56 = {
 			isa = PBXGroup;
 			children = (
+				8913C13B29FAF09700C0D391 /* README.md */,
 				89F642FD29EC5C23001A8C56 /* MyFirstDriver */,
 				89F6430E29EC5D63001A8C56 /* MyFirstDriverApp */,
 				89F642FA29EC5C23001A8C56 /* Frameworks */,
@@ -103,6 +109,7 @@
 		89F642FA29EC5C23001A8C56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89988F2E29F559F100478CC1 /* IOKit.framework */,
 				89BECF5C29EDA7D100450C4B /* USBDriverKit.framework */,
 				89F642FB29EC5C23001A8C56 /* DriverKit.framework */,
 			);
@@ -130,6 +137,7 @@
 				89F6431329EC5D64001A8C56 /* Assets.xcassets */,
 				89F6431529EC5D64001A8C56 /* Preview Content */,
 				898993F629EC6718000C20AF /* Settings.bundle */,
+				89988F3029F55BB300478CC1 /* Bridging-Header.h */,
 			);
 			path = MyFirstDriverApp;
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFirstDriverApp/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -498,6 +507,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFirstDriverApp/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
