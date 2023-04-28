@@ -1,6 +1,6 @@
 //
 //  Bridging-Header.h
-//  MyFirstDriver
+//  MaskromDetector
 //
 //  Created by Kenta Kubo on 4/23/23.
 //

@@ -11,9 +11,9 @@
 		89988F3129F55D3600478CC1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89988F2E29F559F100478CC1 /* IOKit.framework */; };
 		89BECF5D29EDA7D100450C4B /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BECF5C29EDA7D100450C4B /* USBDriverKit.framework */; };
 		89F642FC29EC5C23001A8C56 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F642FB29EC5C23001A8C56 /* DriverKit.framework */; };
-		89F642FF29EC5C23001A8C56 /* MyFirstDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89F642FE29EC5C23001A8C56 /* MyFirstDriver.cpp */; };
-		89F6430129EC5C23001A8C56 /* MyFirstDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 89F6430029EC5C23001A8C56 /* MyFirstDriver.iig */; };
-		89F6431029EC5D63001A8C56 /* MyFirstDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6430F29EC5D63001A8C56 /* MyFirstDriverApp.swift */; };
+		89F642FF29EC5C23001A8C56 /* MaskromDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89F642FE29EC5C23001A8C56 /* MaskromDriver.cpp */; };
+		89F6430129EC5C23001A8C56 /* MaskromDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 89F6430029EC5C23001A8C56 /* MaskromDriver.iig */; };
+		89F6431029EC5D63001A8C56 /* MaskromDetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6430F29EC5D63001A8C56 /* MaskromDetectorApp.swift */; };
 		89F6431229EC5D63001A8C56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6431129EC5D63001A8C56 /* ContentView.swift */; };
 		89F6431429EC5D64001A8C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89F6431329EC5D64001A8C56 /* Assets.xcassets */; };
 		89F6431729EC5D64001A8C56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89F6431629EC5D64001A8C56 /* Preview Assets.xcassets */; };
@@ -26,7 +26,7 @@
 			containerPortal = 89F642EF29EC5C23001A8C56 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 89F642F729EC5C23001A8C56;
-			remoteInfo = MyFirstDriver;
+			remoteInfo = MaskromDetector;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,17 +52,17 @@
 		89BECF5C29EDA7D100450C4B /* USBDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDriverKit.framework; path = Library/Frameworks/USBDriverKit.framework; sourceTree = DEVELOPER_DIR; };
 		89F642F829EC5C23001A8C56 /* xyz.kebo.MaskromDetector.Driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = xyz.kebo.MaskromDetector.Driver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F642FB29EC5C23001A8C56 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = Library/Frameworks/DriverKit.framework; sourceTree = DEVELOPER_DIR; };
-		89F642FE29EC5C23001A8C56 /* MyFirstDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyFirstDriver.cpp; sourceTree = "<group>"; };
-		89F6430029EC5C23001A8C56 /* MyFirstDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = MyFirstDriver.iig; sourceTree = "<group>"; };
+		89F642FE29EC5C23001A8C56 /* MaskromDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaskromDriver.cpp; sourceTree = "<group>"; };
+		89F6430029EC5C23001A8C56 /* MaskromDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = MaskromDriver.iig; sourceTree = "<group>"; };
 		89F6430229EC5C23001A8C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89F6430829EC5C67001A8C56 /* MyFirstDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFirstDriver.entitlements; sourceTree = "<group>"; };
+		89F6430829EC5C67001A8C56 /* MaskromDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MaskromDriver.entitlements; sourceTree = "<group>"; };
 		89F6430D29EC5D63001A8C56 /* MaskromDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaskromDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		89F6430F29EC5D63001A8C56 /* MyFirstDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstDriverApp.swift; sourceTree = "<group>"; };
+		89F6430F29EC5D63001A8C56 /* MaskromDetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskromDetectorApp.swift; sourceTree = "<group>"; };
 		89F6431129EC5D63001A8C56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89F6431329EC5D64001A8C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89F6431629EC5D64001A8C56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89F6431B29EC5E0B001A8C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		89F6431C29EC5E32001A8C56 /* MyFirstDriverApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFirstDriverApp.entitlements; sourceTree = "<group>"; };
+		89F6431C29EC5E32001A8C56 /* MaskromDetector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MaskromDetector.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				8913C13B29FAF09700C0D391 /* README.md */,
-				89F642FD29EC5C23001A8C56 /* MyFirstDriver */,
-				89F6430E29EC5D63001A8C56 /* MyFirstDriverApp */,
+				89F642FD29EC5C23001A8C56 /* MaskromDriver */,
+				89F6430E29EC5D63001A8C56 /* MaskromDetector */,
 				89F642FA29EC5C23001A8C56 /* Frameworks */,
 				89F642F929EC5C23001A8C56 /* Products */,
 			);
@@ -116,30 +116,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		89F642FD29EC5C23001A8C56 /* MyFirstDriver */ = {
+		89F642FD29EC5C23001A8C56 /* MaskromDriver */ = {
 			isa = PBXGroup;
 			children = (
-				89F6430829EC5C67001A8C56 /* MyFirstDriver.entitlements */,
-				89F642FE29EC5C23001A8C56 /* MyFirstDriver.cpp */,
-				89F6430029EC5C23001A8C56 /* MyFirstDriver.iig */,
+				89F6430829EC5C67001A8C56 /* MaskromDriver.entitlements */,
+				89F642FE29EC5C23001A8C56 /* MaskromDriver.cpp */,
+				89F6430029EC5C23001A8C56 /* MaskromDriver.iig */,
 				89F6430229EC5C23001A8C56 /* Info.plist */,
 			);
-			path = MyFirstDriver;
+			path = MaskromDriver;
 			sourceTree = "<group>";
 		};
-		89F6430E29EC5D63001A8C56 /* MyFirstDriverApp */ = {
+		89F6430E29EC5D63001A8C56 /* MaskromDetector */ = {
 			isa = PBXGroup;
 			children = (
-				89F6431C29EC5E32001A8C56 /* MyFirstDriverApp.entitlements */,
+				89F6431C29EC5E32001A8C56 /* MaskromDetector.entitlements */,
 				89F6431B29EC5E0B001A8C56 /* Info.plist */,
-				89F6430F29EC5D63001A8C56 /* MyFirstDriverApp.swift */,
+				89F6430F29EC5D63001A8C56 /* MaskromDetectorApp.swift */,
 				89F6431129EC5D63001A8C56 /* ContentView.swift */,
 				89F6431329EC5D64001A8C56 /* Assets.xcassets */,
 				89F6431529EC5D64001A8C56 /* Preview Content */,
 				898993F629EC6718000C20AF /* Settings.bundle */,
 				89988F3029F55BB300478CC1 /* Bridging-Header.h */,
 			);
-			path = MyFirstDriverApp;
+			path = MaskromDetector;
 			sourceTree = "<group>";
 		};
 		89F6431529EC5D64001A8C56 /* Preview Content */ = {
@@ -163,9 +163,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		89F642F729EC5C23001A8C56 /* MyFirstDriver */ = {
+		89F642F729EC5C23001A8C56 /* MaskromDriver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 89F6430529EC5C23001A8C56 /* Build configuration list for PBXNativeTarget "MyFirstDriver" */;
+			buildConfigurationList = 89F6430529EC5C23001A8C56 /* Build configuration list for PBXNativeTarget "MaskromDriver" */;
 			buildPhases = (
 				89F642F329EC5C23001A8C56 /* Headers */,
 				89F642F429EC5C23001A8C56 /* Sources */,
@@ -176,8 +176,8 @@
 			);
 			dependencies = (
 			);
-			name = MyFirstDriver;
-			productName = MyFirstDriver;
+			name = MaskromDriver;
+			productName = MaskromDriver;
 			productReference = 89F642F829EC5C23001A8C56 /* xyz.kebo.MaskromDetector.Driver.dext */;
 			productType = "com.apple.product-type.driver-extension";
 		};
@@ -196,7 +196,7 @@
 				89F6432329EC5F87001A8C56 /* PBXTargetDependency */,
 			);
 			name = MaskromDetector;
-			productName = MyFirstDriverApp;
+			productName = MaskromDetector;
 			productReference = 89F6430D29EC5D63001A8C56 /* MaskromDetector.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -218,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 89F642F229EC5C23001A8C56 /* Build configuration list for PBXProject "MyFirstDriver" */;
+			buildConfigurationList = 89F642F229EC5C23001A8C56 /* Build configuration list for PBXProject "MaskromDetector" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -231,7 +231,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				89F642F729EC5C23001A8C56 /* MyFirstDriver */,
+				89F642F729EC5C23001A8C56 /* MaskromDriver */,
 				89F6430C29EC5D63001A8C56 /* MaskromDetector */,
 			);
 		};
@@ -262,8 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89F6430129EC5C23001A8C56 /* MyFirstDriver.iig in Sources */,
-				89F642FF29EC5C23001A8C56 /* MyFirstDriver.cpp in Sources */,
+				89F6430129EC5C23001A8C56 /* MaskromDriver.iig in Sources */,
+				89F642FF29EC5C23001A8C56 /* MaskromDriver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F6431229EC5D63001A8C56 /* ContentView.swift in Sources */,
-				89F6431029EC5D63001A8C56 /* MyFirstDriverApp.swift in Sources */,
+				89F6431029EC5D63001A8C56 /* MaskromDetectorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +281,7 @@
 /* Begin PBXTargetDependency section */
 		89F6432329EC5F87001A8C56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 89F642F729EC5C23001A8C56 /* MyFirstDriver */;
+			target = 89F642F729EC5C23001A8C56 /* MaskromDriver */;
 			targetProxy = 89F6432229EC5F87001A8C56 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -399,12 +399,12 @@
 		89F6430629EC5C23001A8C56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = MyFirstDriver/MyFirstDriver.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MaskromDriver/MaskromDriver.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4678G5DL2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyFirstDriver/Info.plist;
+				INFOPLIST_FILE = MaskromDriver/Info.plist;
 				INFOPLIST_KEY_OSBundleUsageDescription = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.kebo.MaskromDetector.Driver;
@@ -418,12 +418,12 @@
 		89F6430729EC5C23001A8C56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = MyFirstDriver/MyFirstDriver.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MaskromDriver/MaskromDriver.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4678G5DL2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyFirstDriver/Info.plist;
+				INFOPLIST_FILE = MaskromDriver/Info.plist;
 				INFOPLIST_KEY_OSBundleUsageDescription = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.kebo.MaskromDetector.Driver;
@@ -439,14 +439,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MyFirstDriverApp/MyFirstDriverApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MaskromDetector/MaskromDetector.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyFirstDriverApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MaskromDetector/Preview Content\"";
 				DEVELOPMENT_TEAM = X4678G5DL2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyFirstDriverApp/Info.plist;
+				INFOPLIST_FILE = MaskromDetector/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,7 +467,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MyFirstDriverApp/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MaskromDetector/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -479,14 +479,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MyFirstDriverApp/MyFirstDriverApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MaskromDetector/MaskromDetector.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyFirstDriverApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MaskromDetector/Preview Content\"";
 				DEVELOPMENT_TEAM = X4678G5DL2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyFirstDriverApp/Info.plist;
+				INFOPLIST_FILE = MaskromDetector/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -507,7 +507,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MyFirstDriverApp/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MaskromDetector/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -518,7 +518,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		89F642F229EC5C23001A8C56 /* Build configuration list for PBXProject "MyFirstDriver" */ = {
+		89F642F229EC5C23001A8C56 /* Build configuration list for PBXProject "MaskromDetector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89F6430329EC5C23001A8C56 /* Debug */,
@@ -527,7 +527,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89F6430529EC5C23001A8C56 /* Build configuration list for PBXNativeTarget "MyFirstDriver" */ = {
+		89F6430529EC5C23001A8C56 /* Build configuration list for PBXNativeTarget "MaskromDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89F6430629EC5C23001A8C56 /* Debug */,

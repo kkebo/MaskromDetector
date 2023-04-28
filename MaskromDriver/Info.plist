@@ -4,7 +4,7 @@
 <dict>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>MyFirstDriver</key>
+		<key>MaskromDriver</key>
 		<dict>
 			<key>CFBundleIdentifierKernel</key>
 			<string>com.apple.kpi.iokit</string>
@@ -13,13 +13,13 @@
 			<key>IOProviderClass</key>
 			<string>IOUSBHostDevice</string>
 			<key>IOUserClass</key>
-			<string>MyFirstDriver</string>
+			<string>MaskromDriver</string>
 			<key>IOUserServerName</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>idVendor</key>
-			<integer>0x2207</integer>
+			<integer>8711</integer>
 			<key>idProduct</key>
-			<integer>0x330c</integer>
+			<integer>13068</integer>
 		</dict>
 	</dict>
 </dict>

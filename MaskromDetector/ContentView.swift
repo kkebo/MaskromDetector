@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  MyFirstDriverApp
+//  MaskromDetector
 //
 //  Created by Kenta Kubo on 4/17/23.
 //
@@ -53,7 +53,7 @@ struct ContentView: View {
             .controlSize(.large)
             .hoverEffect()
             Button("Test my PPP") {
-                self.isMaskromMode = IOServiceGetMatchingService(kIOMainPortDefault, IOServiceNameMatching("MyFirstDriver")) != IO_OBJECT_NULL
+                self.isMaskromMode = IOServiceGetMatchingService(kIOMainPortDefault, IOServiceNameMatching("MaskromDriver")) != IO_OBJECT_NULL
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)

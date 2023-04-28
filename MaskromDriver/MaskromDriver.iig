@@ -1,16 +1,16 @@
 //
-//  MyFirstDriver.iig
-//  MyFirstDriver
+//  MaskromDriver.iig
+//  MaskromDriver
 //
 //  Created by Kenta Kubo on 4/17/23.
 //
 
-#ifndef MyFirstDriver_h
-#define MyFirstDriver_h
+#ifndef MaskromDriver_h
+#define MaskromDriver_h
 
 #include <DriverKit/IOService.iig>
 
-class MyFirstDriver: public IOService
+class MaskromDriver: public IOService
 {
 public:
     virtual bool init() override;
@@ -18,4 +18,4 @@ public:
     virtual void free() override;
 };
 
-#endif /* MyFirstDriver_h */
+#endif /* MaskromDriver_h */

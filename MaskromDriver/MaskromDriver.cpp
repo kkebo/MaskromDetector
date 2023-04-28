@@ -1,6 +1,6 @@
 //
-//  MyFirstDriver.cpp
-//  MyFirstDriver
+//  MaskromDriver.cpp
+//  MaskromDriver
 //
 //  Created by Kenta Kubo on 4/17/23.
 //
@@ -9,41 +9,41 @@
 
 #include <USBDriverKit/IOUSBHostDevice.h>
 
-#include "MyFirstDriver.h"
+#include "MaskromDriver.h"
 
-struct MyFirstDriver_IVars
+struct MaskromDriver_IVars
 {
     IOUSBHostDevice *device;
 };
 
-bool MyFirstDriver::init()
+bool MaskromDriver::init()
 {
     if (const auto ret = super::init(); !ret)
     {
-        os_log(OS_LOG_DEFAULT, "MyFirstDriver: init() - super::init failed with error: 0x%08x.", ret);
+        os_log(OS_LOG_DEFAULT, "MaskromDriver: init() - super::init failed with error: 0x%08x.", ret);
         return ret;
     }
 
-    if (ivars = IONewZero(MyFirstDriver_IVars, 1); ivars == nullptr)
+    if (ivars = IONewZero(MaskromDriver_IVars, 1); ivars == nullptr)
     {
         return false;
     }
 
-    os_log(OS_LOG_DEFAULT, "MyFirstDriver: init() - Finished.");
+    os_log(OS_LOG_DEFAULT, "MaskromDriver: init() - Finished.");
 
     return true;
 }
 
-kern_return_t IMPL(MyFirstDriver, Start)
+kern_return_t IMPL(MaskromDriver, Start)
 {
     if (const auto ret = Start(provider, SUPERDISPATCH); ret != kIOReturnSuccess)
     {
-        os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - super::Start failed with error: 0x%08x.", ret);
+        os_log(OS_LOG_DEFAULT, "MaskromDriver: Start() - super::Start failed with error: 0x%08x.", ret);
         Stop(provider, SUPERDISPATCH);
         return ret;
     }
 
-    os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - super::Start succeeded.");
+    os_log(OS_LOG_DEFAULT, "MaskromDriver: Start() - super::Start succeeded.");
 
     if (ivars->device = OSDynamicCast(IOUSBHostDevice, provider); ivars->device == nullptr)
     {
@@ -53,7 +53,7 @@ kern_return_t IMPL(MyFirstDriver, Start)
 
     if (const auto *deviceDescriptor = ivars->device->CopyDeviceDescriptor(); deviceDescriptor != nullptr)
     {
-        os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - VID: %04hx, PID: %04hx", deviceDescriptor->idVendor, deviceDescriptor->idProduct);
+        os_log(OS_LOG_DEFAULT, "MaskromDriver: Start() - VID: %04hx, PID: %04hx", deviceDescriptor->idVendor, deviceDescriptor->idProduct);
     }
 
     if (const auto ret = RegisterService(); ret != kIOReturnSuccess)
@@ -62,14 +62,14 @@ kern_return_t IMPL(MyFirstDriver, Start)
         return ret;
     }
 
-    os_log(OS_LOG_DEFAULT, "MyFirstDriver: Start() - RegisterService succeeded.");
+    os_log(OS_LOG_DEFAULT, "MaskromDriver: Start() - RegisterService succeeded.");
 
     return kIOReturnSuccess;
 }
 
-void MyFirstDriver::free()
+void MaskromDriver::free()
 {
     OSSafeReleaseNULL(ivars->device);
-    IOSafeDeleteNULL(ivars, MyFirstDriver_IVars, 1);
+    IOSafeDeleteNULL(ivars, MaskromDriver_IVars, 1);
     super::free();
 }
